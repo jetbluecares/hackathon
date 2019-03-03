@@ -15,3 +15,11 @@ We've added features to in-flight to show customers how much JetBlue cares.
 \*Post Flight Survey for Customer Feedback
 
 \*Suggest Future Destinations/Flights
+
+How to Start
+
+* createdb hackathon
+* createdb hackathon-test
+* npm run seed
+* npm run start-dev
+* localhost:8080
