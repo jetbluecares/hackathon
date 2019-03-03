@@ -41,9 +41,9 @@ h2,
 h3,
 h4 {
   font-family: 'Dosis', sans-serif;
-  text-transform: uppercase;
   letter-spacing: 0.2rem;
-  color: white;
+  color: #004990;
+  padding: 1em;
 }
 
 p {
@@ -82,4 +82,28 @@ button {
 nav {
   align-items: center;
   text-align: center;
+}
+
+#survey {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 3em;
+}
+
+#thumbsup {
+  margin: 1em;
+}
+
+#thumbsdown {
+  margin: 1em;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 100px;
+  width: 100px;
 }

@@ -22,7 +22,7 @@ router.get('/:amenity', async (req, res, next) => {
     const destinations = await Destination.findAll({
       where: {
         amenities: {
-          [Op.contains]: amenity
+          [Op.contains]: [amenity]
         }
       }
     })
