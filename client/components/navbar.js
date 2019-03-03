@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 import JetBlue_Airways_Logo from '../../public/JetBlue_Airways_Logo.png'
 
 const Navbar = () => (
