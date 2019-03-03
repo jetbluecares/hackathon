@@ -101,3 +101,21 @@ export const feedback = [
     name: 'Take a survey'
   }
 ]
+
+export const entertainment = [
+  {
+    name: 'Movies'
+  },
+  {
+    name: 'TV Shows'
+  },
+  {
+    name: 'Music'
+  }
+]
+
+export const nextDestination = [
+  {
+    link: '/destination'
+  }
+]
