@@ -1,21 +1,20 @@
 import React from 'react'
-import {Selection} from '../components'
+import {Item} from '../components'
+import {connect} from 'react-redux'
 
 const SelectionScreen = props => {
+  console.log('DID WE MAKE IT', props)
+  const {items} = props
   return (
-    <div className="main-container">
-      <div className="main-header">
+    <div className="selection-container">
+      <div className="selection-header">
         <h1>Select Below</h1>
       </div>
 
-      <div className="main-selections">
+      <div className="selections-items">
         <div>
-          {props.selections.map(selection => (
-            <Selection
-              key={selection.name}
-              name={selection.name}
-              image={selection.imageUrl}
-            />
+          {items.map(item => (
+            <Item key={item.name} name={item.name} image={item.imageUrl} />
           ))}
         </div>
       </div>
@@ -23,4 +22,8 @@ const SelectionScreen = props => {
   )
 }
 
-export default SelectionScreen
+const mapState = state => ({
+  items: state.items
+})
+
+export default connect(mapState)(SelectionScreen)

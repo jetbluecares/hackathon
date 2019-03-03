@@ -1,58 +1,65 @@
 import React, {Component} from 'react'
 import {NavLink, withRouter, Link} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {getCity} from '../store'
+import {getCity} from '../store/index'
 
-export class Destination extends Component {
-  constructor() {
-    super()
-    this.setState = {
-      selectDestination: {}
-    }
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
+class Destination extends Component {
+  constructor(props) {
+    super(props)
+    // this.state = {
+    //   selectDestination: {}
+    // }
+    // this.handleChange = this.handleChange.bind(this)
+    // this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  handleSubmit(event) {
-    event.preventDefault()
-    this.setState({
-      destinations: alldest()
-    })
+  componentDidMount() {
+    console.log('comdpdidmount')
+    console.log('this.props', this.props)
+    this.props.getCity()
   }
 
-  handleChange(event) {
-    // this.setState({
-    //   selectDestination: event.target.value
-    // })
-  }
+  // handleSubmit(event) {
+  //   event.preventDefault()
+  // }
+
+  // handleChange(event) {
+  //   // this.setState({
+  //   //   selectDestination: event.target.value
+  //   // })
+  // }
 
   render() {
-    //const {destination} = this.props.destination
-    console.log(this.props, 'detidjsf')
+    let alldestinat = this.props.destination
+    // const {destination} = this.props.destination
+    console.log(alldestinat, 'redux store')
     return (
-      <div>
-        <label htmlFor="dest-select">Choose a destination</label>
-        <select id="dest-select">
-          {this.props.destination.map(city => {
-            return (
-              <option value={city.name} key={city.id}>
-                {city.name}
-              </option>
-            )
-          })}
-        </select>
-      </div>
+      <div />
+      //   {alldestinat} && (
+      //     <div>
+      //       <label htmlFor="dest-select">Choose a destination</label>
+      //       <select id="dest-select" onSubmit={this.handleSubmit}>
+      //         {this.props.destination.map(city => {
+      //           return (
+      //             <option value={city.name} key={city.id}>
+      //               {city.name}
+      //             </option>
+      //           )
+      //         })}
+      //       </select>
+      //     </div>
+      //   ) : (
+      //     <div />
+      //   )
     )
   }
 }
 
 const mapStateToProps = state => ({
-  destination: state.destination
+  destination: state.destination.destination
 })
 
 const mapDispatchProps = dispatch => ({
-  alldest: () => getCity()
+  getCity: () => dispatch(getCity())
 })
-export default withRouter(
-  connect(mapStateToProps, mapDispatchProps)(Destination)
-)
+export default connect(mapStateToProps, mapDispatchProps)(Destination)
