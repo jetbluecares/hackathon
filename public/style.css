@@ -92,10 +92,14 @@ nav {
 
 .selection-single-item,
 .main-single-category {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   justify-content: space-around;
   text-align: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(50px, auto);
+  grid-gap: 2em;
+  padding: 1em;
+  padding-top: 2em;
 }
 
 #survey {
