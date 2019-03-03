@@ -8,7 +8,7 @@ router.get('/', async (req, res, next) => {
   try {
     const destinations = await Destination.findAll({
       // explicitly select only the name and amenities fields
-      attributes: ['name', 'amenities']
+      attributes: ['name', 'amenities', 'id']
     })
     res.json(destinations)
   } catch (err) {

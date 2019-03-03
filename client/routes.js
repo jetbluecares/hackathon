@@ -2,9 +2,11 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {withRouter, Route, Switch} from 'react-router-dom'
 import PropTypes from 'prop-types'
-import {Login, Signup, UserHome, FlightSurvey} from './components'
-import {MainScreen, SelectionScreen} from './components'
+
+import {MainScreen, SelectionScreen, Destination} from './components'
 import {me} from './store'
+// import {Destination} from './components'
+// import destination from './store/destination'
 
 /**
  * COMPONENT
@@ -31,6 +33,7 @@ class Routes extends Component {
         {/* Displays our Login component as a fallback */}
         <Route component={Login} />
         <Route exact path="/category" component={SelectionScreen} />
+        <Route path="/destination" component={Destination} />
         <Route path="/" component={MainScreen} />
       </Switch>
     )
