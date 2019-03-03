@@ -89,3 +89,15 @@ export const comfort = [
       'https://www.mensjournal.com/wp-content/uploads/mj-618_348_a-manly-face-wipe.jpg?w=618'
   }
 ]
+
+export const feedback = [
+  {
+    name: 'Give a compliment'
+  },
+  {
+    name: 'Tell us how we can improve'
+  },
+  {
+    name: 'Take a survey'
+  }
+]

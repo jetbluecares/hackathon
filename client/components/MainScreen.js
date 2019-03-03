@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {Category} from '../components'
-import {snacks, drinks, comfort} from '../images'
+import {snacks, drinks, comfort, feedback} from '../images'
 import {connect} from 'react-redux'
 import {setItems} from '../store/index'
 import history from '../history'
@@ -29,7 +29,7 @@ const categories = [
   },
   {
     name: 'Give Feedback',
-    items: null
+    items: feedback
   }
 ]
 
