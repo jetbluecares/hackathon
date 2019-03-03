@@ -1,8 +1,6 @@
 import React from 'react'
-import {connect} from 'react-redux'
 import thumbsup from '../../public/thumbsup.png'
 import thumbsdown from '../../public/thumbsdown.png'
-import {Button} from '@material-ui/core'
 
 const surveyQuestions = [
   'How was your experience?',
@@ -11,36 +9,48 @@ const surveyQuestions = [
   'How was the check in process?',
   'How was navigating JetBlue.com?',
   'Was the airport staff helpful?',
-  'Ease of passing through security?',
-  'Helpfulness of staff after security?',
-  'How was the airpot terminal?',
+  'How was the ease of passing through security?',
+  'How was the staff after security?',
+  'How was the airport terminal?',
   'How was the boarding process?'
 ]
 
-class FlightSurvey extends Component {
+let idx = 0
+
+export default class FlightSurvey extends React.Component {
   constructor() {
     super()
     this.state = {
-      question: surveyQuestions[0]
+      question: surveyQuestions[idx]
     }
   }
 
   render() {
     return (
-      <div>
-        <h2>{this.question}</h2>
+      <div id="survey">
+        <h2>{this.state.question}</h2>
         <div id="vote">
-          <Button>
-            <img id="thumbsup" src={thumbsup} height="60" alt="thumbs up" />
-          </Button>
-          <Button>
-            <img
-              id="thumbsdown"
-              src={thumbsdown}
-              height="60"
-              alt="thumbs down"
-            />
-          </Button>
+          <img
+            id="thumbsup"
+            src={thumbsup}
+            height="60"
+            alt="thumbs up"
+            onClick={() => {
+              idx++
+              this.setState({question: surveyQuestions[idx]})
+            }}
+          />
+
+          <img
+            id="thumbsdown"
+            src={thumbsdown}
+            height="60"
+            alt="thumbs down"
+            onClick={() => {
+              idx++
+              this.setState({question: surveyQuestions[idx]})
+            }}
+          />
         </div>
       </div>
     )
