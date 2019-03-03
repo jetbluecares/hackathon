@@ -16,7 +16,7 @@ We've added features to in-flight to show customers how much JetBlue cares.
 
 \*Suggest Future Destinations/Flights
 
-How to Start
+# How to Start
 
 * createdb hackathon
 * createdb hackathon-test
