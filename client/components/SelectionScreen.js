@@ -7,12 +7,8 @@ const SelectionScreen = props => {
   const {items} = props
   return (
     <div className="selection-container">
-      <div className="selection-header">
-        <h1>Select Below</h1>
-      </div>
-
-      <div className="selections-items">
-        <div>
+      <div className="selection-items">
+        <div className="selection-single-item">
           {items.map(item => (
             <Item key={item.name} name={item.name} image={item.imageUrl} />
           ))}

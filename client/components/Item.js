@@ -1,13 +1,11 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-
 const Item = props => {
   return (
-    <div>
-      <button type="button" key={props.name}>
-        <h1>{props.name}</h1>
-        <img src={props.imageUrl} />
-      </button>
+    <div className="item-container">
+      {/* <button type="button" key={props.name}> */}
+      <h1>{props.name}</h1>
+      <img src={props.image} className="img" />
+      {/* </button> */}
     </div>
   )
 }

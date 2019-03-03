@@ -1,5 +1,10 @@
 body {
+  /* https://uigradients.com/#Ash */
   font-family: sans-serif;
+  background-color: #00245d;
+  margin: 0;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
+  color: #ffffff;
 }
 
 a {
@@ -27,23 +32,14 @@ form div {
   --green: #3a7728;
 }
 
-body {
-  /* https://uigradients.com/#Ash */
-
-  background: #f1f5f8; /* fallback for old browsers */
-  margin: 0;
-  font-family: 'Roboto', 'Open Sans', sans-serif;
-  color: #004990;
-}
-
 h1,
 h2,
 h3,
 h4 {
   font-family: 'Dosis', sans-serif;
   letter-spacing: 0.2rem;
-  color: #004990;
-  padding: 1em;
+  color: white;
+  text-align: center;
 }
 
 p {
@@ -60,19 +56,24 @@ p {
 } */
 
 button {
-  background-color: var(--indigo);
+  background-color: #ff7300;
   font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
-  text-transform: uppercase;
-  color: #00245d;
-  padding: 1rem;
-  border-radius: 3px;
+  font-size: 2em;
+  color: #ffffff;
+  border-radius: 0.125rem 0.75rem;
   border: none;
+  width: 250px;
+  height: 250px;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: #fe9500;
 }
 
 /* tablet */
-@media only screen and (min-width: 768px) {
-}
+/* @media only screen and (min-width: 768px) {
+} */
 
 #logo {
   padding: 1rem;
@@ -81,6 +82,19 @@ button {
 
 nav {
   align-items: center;
+  text-align: center;
+}
+
+.img {
+  width: auto;
+  height: 300px;
+}
+
+.selection-single-item,
+.main-single-category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   text-align: center;
 }
 
@@ -98,12 +112,4 @@ nav {
 
 #thumbsdown {
   margin: 1em;
-}
-
-.card {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  padding: 100px;
-  width: 100px;
 }
