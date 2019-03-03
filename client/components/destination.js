@@ -1,33 +1,32 @@
 import React, {Component} from 'react'
 import {NavLink, withRouter, Link} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {getCity} from '../store/index'
+import {getCity, getOneDestination} from '../store/index'
 
 class Destination extends Component {
   constructor(props) {
     super(props)
-    // this.state = {
-    //   selectDestination: {}
-    // }
-    // this.handleChange = this.handleChange.bind(this)
-    // this.handleSubmit = this.handleSubmit.bind(this)
+    this.state = {
+      selectDestination: {}
+    }
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   componentDidMount() {
-    console.log('comdpdidmount')
-    console.log('this.props', this.props)
     this.props.getCity()
   }
 
-  // handleSubmit(event) {
-  //   event.preventDefault()
-  // }
+  handleSubmit(event) {
+    event.preventDefault()
+    this.props.getOneDestination(this.state.selectDestination)
+  }
 
-  // handleChange(event) {
-  //   // this.setState({
-  //   //   selectDestination: event.target.value
-  //   // })
-  // }
+  handleChange(event) {
+    this.setState({
+      selectDestination: event.target.value
+    })
+  }
 
   render() {
     let {destination} = this.props
@@ -57,6 +56,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchProps = dispatch => ({
-  getCity: () => dispatch(getCity())
+  getCity: () => dispatch(getCity()),
+  getOneDestination: amenities => dispatch(getOneDestination(amenities))
 })
 export default connect(mapStateToProps, mapDispatchProps)(Destination)
