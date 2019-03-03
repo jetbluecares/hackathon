@@ -52,7 +52,7 @@ class MainScreen extends React.Component {
         </div>
 
         <div className="main-categories">
-          <div>
+          <div className="main-single-category">
             {categories.map(category => (
               <Category
                 key={category}
