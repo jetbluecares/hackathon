@@ -45,6 +45,8 @@ class SelectionScreen extends Component {
                     name={item.name}
                     image={item.imageUrl}
                     onClick={this.onClick}
+                    link={item.link}
+                    type={item.type}
                   />
                 ))}
               </div>
