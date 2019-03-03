@@ -97,3 +97,19 @@ nav {
   justify-content: space-around;
   text-align: center;
 }
+
+#survey {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 3em;
+}
+
+#thumbsup {
+  margin: 1em;
+}
+
+#thumbsdown {
+  margin: 1em;
+}
