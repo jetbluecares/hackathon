@@ -1,6 +1,6 @@
 import React from 'react'
-import jetbluelogo from '../../public/jetbluelogo.svg'
 import {Link} from 'react-router-dom'
+import jetbluelogo from '../../public/jetbluelogo.svg'
 
 const Navbar = () => (
   <div>
