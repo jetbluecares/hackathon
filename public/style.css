@@ -99,3 +99,11 @@ nav {
 #thumbsdown {
   margin: 1em;
 }
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 100px;
+  width: 100px;
+}
