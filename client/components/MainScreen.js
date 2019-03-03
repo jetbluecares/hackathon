@@ -1,15 +1,16 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {MainSelection} from '../components'
+import {Category} from '../components'
+import {snacks, drinks, comfort} from '../images'
 
 const MainScreen = () => {
   const titles = [
-    'snacks',
-    'drinks',
-    'entertainment',
-    'comfort',
-    'call attendant',
-    'give feedback'
+    'Snacks',
+    'Drinks',
+    'Entertainment',
+    'Comfort',
+    'Call Attendant',
+    'Give Feedback'
   ]
   console.log('MADE IT TO MAIN SCREEN', titles)
 
@@ -25,7 +26,9 @@ const MainScreen = () => {
 
       <div className="main-selections">
         <div>
-          {titles.map(selection => <MainSelection title={selection} />)}
+          {titles.map(selection => (
+            <Selection key={selection} title={selection} />
+          ))}
         </div>
       </div>
     </div>
