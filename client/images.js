@@ -43,7 +43,8 @@ export const drinks = [
   },
   {
     name: 'Seltzer Water',
-    imageUrl: ''
+    imageUrl:
+      'https://taldepot.com/media/catalog/product/cache/1/image/600x/9df78eab33525d08d6e5fb8d27136e95/0/0/00402cfsinglespritz.jpg'
   },
   {
     name: 'V8',
@@ -60,26 +61,31 @@ export const drinks = [
 export const comfort = [
   {
     name: 'Blanket',
-    imageUrl: ''
+    imageUrl:
+      'https://zorch.scene7.com/is/image/Zorch/JET0000971NavyWhite1?$PDP2$'
   },
   {
     name: 'Pillow',
-    imageUrl: ''
+    imageUrl: 'https://p.globalsources.com/IMAGES/PDT/BIG/257/B1152911257.jpg'
   },
   {
     name: 'Ear Phones',
-    imageUrl: ''
+    imageUrl:
+      'http://www.globalnerdy.com/wordpress/wp-content/uploads/2015/07/jetblue-earbuds-2015-01.jpg'
   },
   {
-    name: 'Ear Plugs',
-    imageUrl: ''
+    name: 'Snooze Kit',
+    imageUrl:
+      'https://www.jetblue.com/magnoliapublic/dam/ui-assets/imagery/info-assets/Inflight-Experience/Snooze-Kit-563x317.jpg'
   },
   {
-    name: 'Eye Mask',
-    imageUrl: ''
+    name: 'Breath Mint',
+    imageUrl:
+      'https://cdn.shopify.com/s/files/1/1322/7529/products/spearmint_1024x1024_08fc519f-e533-412c-8c8c-d69e5ae2a7dc.png?v=1503613272'
   },
   {
     name: 'Facial Wipe',
-    imageUrl: ''
+    imageUrl:
+      'https://www.mensjournal.com/wp-content/uploads/mj-618_348_a-manly-face-wipe.jpg?w=618'
   }
 ]
