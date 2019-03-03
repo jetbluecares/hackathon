@@ -17,7 +17,7 @@ export const getCity = () => async dispatch => {
   }
 }
 
-export const destination = (state = defaultDestination, action) => {
+export default function(state = defaultDestination, action) {
   switch (action.type) {
     case GET_DESTINATION:
       return action.destination
