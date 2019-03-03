@@ -10,12 +10,76 @@ label {
   display: block;
 }
 
-nav a {
-  display: inline-block;
-  margin: 1em;
-}
-
 form div {
   margin: 1em;
   display: inline-block;
+}
+
+:root {
+  --primary: #004990;
+  --dark: #00245d;
+  --actionblue: #306faa;
+  --softblue: #f1f5f8;
+  --white: #fff;
+  --black: #000000;
+  --highlight: #fe9500;
+  --slate: #353535;
+  --green: #3a7728;
+}
+
+body {
+  /* https://uigradients.com/#Ash */
+
+  background: #f1f5f8; /* fallback for old browsers */
+  margin: 0;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
+  color: #004990;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Dosis', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: white;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+}
+
+.stat-font {
+  font-family: 'Staatliches', cursive;
+}
+
+/* img {
+  object-fit: contain;
+} */
+
+button {
+  background-color: var(--indigo);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #00245d;
+  padding: 1rem;
+  border-radius: 3px;
+  border: none;
+}
+
+/* tablet */
+@media only screen and (min-width: 768px) {
+}
+
+#logo {
+  padding: 1rem;
+  display: inline-block;
+}
+
+nav {
+  align-items: center;
+  text-align: center;
 }
