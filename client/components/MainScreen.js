@@ -2,37 +2,74 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {Category} from '../components'
 import {snacks, drinks, comfort} from '../images'
+import {connect} from 'react-redux'
+import {setItems} from '../store/index'
+import history from '../history'
 
-const MainScreen = () => {
-  const titles = [
-    'Snacks',
-    'Drinks',
-    'Entertainment',
-    'Comfort',
-    'Call Attendant',
-    'Give Feedback'
-  ]
-  console.log('MADE IT TO MAIN SCREEN', titles)
+const categories = [
+  {
+    name: 'Snacks',
+    items: snacks
+  },
+  {
+    name: 'Drinks',
+    items: drinks
+  },
+  {
+    name: 'Entertainment',
+    items: null
+  },
+  {
+    name: 'Comfort',
+    items: comfort
+  },
+  {
+    name: 'Call Attendant',
+    items: null
+  },
+  {
+    name: 'Give Feedback',
+    items: null
+  }
+]
 
-  return (
-    <div className="main-container">
-      <div className="main-header">
-        <h1>Jetblue</h1>
-      </div>
+class MainScreen extends React.Component {
+  constructor(props) {
+    super(props)
+    this.handleClick = this.handleClick.bind(this)
+  }
 
-      <div className="main-question">
-        <h2>What can we help you with?</h2>
-      </div>
+  handleClick(items) {
+    this.props.setItems(items)
+    history.push('/category')
+  }
 
-      <div className="main-selections">
-        <div>
-          {titles.map(selection => (
-            <Selection key={selection} title={selection} />
-          ))}
+  render() {
+    return (
+      <div className="main-container">
+        <div className="main-question">
+          <h2>What can we help you with?</h2>
+        </div>
+
+        <div className="main-categories">
+          <div>
+            {categories.map(category => (
+              <Category
+                key={category}
+                name={category.name}
+                items={category.items}
+                handleClick={this.handleClick}
+              />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
-export default MainScreen
+const mapDispatch = dispatch => ({
+  setItems: items => dispatch(setItems(items))
+})
+
+export default connect(null, mapDispatch)(MainScreen)
