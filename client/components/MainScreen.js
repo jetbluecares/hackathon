@@ -96,6 +96,8 @@ class MainScreen extends React.Component {
                     key={category}
                     name={category.name}
                     items={category.items}
+                    link={category.link}
+                    type={category.type}
                     handleClick={this.handleClick}
                     onClick={this.onClick}
                   />

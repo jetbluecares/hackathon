@@ -92,13 +92,19 @@ export const comfort = [
 
 export const feedback = [
   {
-    name: 'Give a compliment'
+    name: 'Give a compliment',
+    type: 'feedback',
+    link: '/flightsurvey'
   },
   {
-    name: 'Tell us how we can improve'
+    name: 'Tell us how we can improve',
+    type: 'feedback',
+    link: '/flightsurvey'
   },
   {
-    name: 'Take a survey'
+    name: 'Take a survey',
+    type: 'feedback',
+    link: '/flightsurvey'
   }
 ]
 
