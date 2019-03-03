@@ -11,7 +11,7 @@ const Category = props => {
   return (
     <div className="categories-container">
       <button type="button" onClick={() => handleClick(items)}>
-        {name}{' '}
+        {name}
       </button>
     </div>
   )
