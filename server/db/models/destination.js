@@ -20,4 +20,8 @@ const Destination = db.define('destination', {
   }
 })
 
+Destination.findByAmenities = function(amenities) {
+  return Destination.findAll(amenities)
+}
+
 module.exports = Destination
