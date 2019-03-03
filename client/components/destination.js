@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {NavLink, withRouter, Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {getCity, getOneDestination} from '../store/index'
+import DestinationList from './destinationList'
 
 class Destination extends Component {
   constructor(props) {
@@ -35,13 +36,25 @@ class Destination extends Component {
     if (destination) {
       return (
         <div>
+          <div>Flights from New York, JFK</div>
           <label htmlFor="dest-select">Choose a destination</label>
           <select id="dest-select" onSubmit={this.handleSubmit}>
+            <option>Choose a destination</option>
             {this.props.destination.map(city => {
               return (
-                <option value={city.name} key={city.id}>
-                  {city.name}
-                </option>
+                <DestinationList
+                  city={city}
+                  key={city.id}
+                  selectedDestination={this.state.selectDestination}
+                />
+
+                // <option value={city.name} key={city.id}>
+                //   {city.name}
+                // </option>
+
+                // <option value={city.name} key={city.id}>
+                //   {city.name}
+                // </option>
               )
             })}
           </select>
@@ -57,6 +70,6 @@ const mapStateToProps = state => ({
 
 const mapDispatchProps = dispatch => ({
   getCity: () => dispatch(getCity()),
-  getOneDestination: amenities => dispatch(getOneDestination(amenities))
+  getOneDestination: amenties => dispatch(getOneDestination(amenties))
 })
 export default connect(mapStateToProps, mapDispatchProps)(Destination)
