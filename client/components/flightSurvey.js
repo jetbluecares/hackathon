@@ -1,53 +1,19 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import thumbsup from '../../public/thumbsup.png'
+import thumbsdown from '../../public/thumbsdown.png'
 
-const Flight = props => {
-  const {name, displayName, handleSubmit, error} = props
-  const {classes} = props
-
-  return <div className="login-new" />
+const FlightSurvey = () => {
+  return (
+    <div>
+      <h2>{this.question}</h2>
+      <div id="vote">
+        <img id="thumbsup" src={thumbsup} height="60" alt="thumbs up" />
+        <img id="thumbsdown" src={thumbsdown} height="60" alt="thumbs down" />
+      </div>
+    </div>
+  )
 }
-
-const mapLogin = state => {
-  return {
-    name: 'login',
-    displayName: 'Login',
-    error: state.user.error
-  }
-}
-
-const mapSignup = state => {
-  return {
-    name: 'signup',
-    displayName: 'Sign Up',
-    error: state.user.error
-  }
-}
-
-const mapDispatch = dispatch => {
-  return {
-    handleSubmit(evt) {
-      evt.preventDefault()
-      const formName = evt.target.name
-      const email = evt.target.email.value
-      const password = evt.target.password.value
-      if (formName === 'signup') {
-        const firstName = evt.target.firstName.value
-        const lastName = evt.target.lastName.value
-        dispatch(auth(email, password, formName, firstName, lastName))
-      } else {
-        dispatch(auth(email, password, formName))
-      }
-    }
-  }
-}
-
-export const Login = connect(mapLogin, mapDispatch)(
-  withStyles(styles)(AuthForm)
-)
-export const Signup = connect(mapSignup, mapDispatch)(
-  withStyles(styles)(AuthForm)
-)
 
 //Based on your experience, how would you rate your experience?
 
