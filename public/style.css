@@ -10,11 +10,6 @@ label {
   display: block;
 }
 
-nav a {
-  display: inline-block;
-  margin: 1em;
-}
-
 form div {
   margin: 1em;
   display: inline-block;
@@ -60,9 +55,9 @@ p {
   font-family: 'Staatliches', cursive;
 }
 
-img {
+/* img {
   object-fit: contain;
-}
+} */
 
 button {
   background-color: var(--indigo);
@@ -77,4 +72,14 @@ button {
 
 /* tablet */
 @media only screen and (min-width: 768px) {
+}
+
+#logo {
+  padding: 1rem;
+  display: inline-block;
+}
+
+nav {
+  align-items: center;
+  text-align: center;
 }
