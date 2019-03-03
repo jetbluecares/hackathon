@@ -14,6 +14,9 @@ const Destination = db.define('destination', {
   },
   amenities: {
     type: Sequelize.ENUM('Beach', 'Ski', 'Family', 'Nighlife')
+  },
+  bookHotelUrl: {
+    type: Sequelize.STRING
   }
 })
 
