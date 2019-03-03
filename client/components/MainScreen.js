@@ -45,6 +45,7 @@ class MainScreen extends React.Component {
   }
 
   render() {
+    console.log('this.props', this.props)
     return (
       <div className="main-container">
         <div className="main-question">
