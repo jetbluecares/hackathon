@@ -17,7 +17,11 @@ const Category = props => {
   }
   return (
     <div className="categories-container">
-      <button type="button" onClick={() => handleClick(items)}>
+      <button
+        className="name-button"
+        type="button"
+        onClick={() => handleClick(items)}
+      >
         {name}
       </button>
     </div>

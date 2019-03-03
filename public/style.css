@@ -33,13 +33,12 @@ form div {
 }
 
 h1,
-h2,
-h3,
-h4 {
-  font-family: 'Dosis', sans-serif;
-  letter-spacing: 0.2rem;
+h2 {
+  font-family: 'Roboto', sans-serif;
   color: white;
   text-align: center;
+  font-size: 2.5em;
+  font-weight: normal;
 }
 
 p {
@@ -55,10 +54,10 @@ p {
   object-fit: contain;
 } */
 
-button {
+.name-button {
   background-color: #ff7300;
   font-family: 'Roboto', sans-serif;
-  font-size: 2em;
+  font-size: 1.7em;
   color: #ffffff;
   border-radius: 0.125rem 0.75rem;
   border: none;
@@ -67,7 +66,13 @@ button {
   text-transform: uppercase;
 }
 
-button:hover {
+.item-button {
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+}
+
+.name-button:hover {
   background-color: #fe9500;
 }
 
@@ -92,10 +97,14 @@ nav {
 
 .selection-single-item,
 .main-single-category {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   justify-content: space-around;
   text-align: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(50px, auto);
+  grid-gap: 2em;
+  padding: 1em;
+  padding-top: 2em;
 }
 
 #survey {

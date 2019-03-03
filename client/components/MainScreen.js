@@ -60,7 +60,7 @@ class MainScreen extends React.Component {
     return (
       <div className="main-container">
         <div className="main-question">
-          <h2>What can we help you with?</h2>
+          <h1>What can we help you with?</h1>
         </div>
 
         <div className="main-categories">
