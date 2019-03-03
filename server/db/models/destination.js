@@ -17,6 +17,9 @@ const Destination = db.define('destination', {
   },
   bookHotelUrl: {
     type: Sequelize.STRING
+  },
+  origins: {
+    type: Sequelize.ARRAY[Sequelize.STRING]
   }
 })
 
