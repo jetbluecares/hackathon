@@ -27,7 +27,7 @@ const MainScreen = () => {
       <div className="main-selections">
         <div>
           {titles.map(selection => (
-            <Selection key={selection} title={selection} />
+            <Category key={selection} title={selection} />
           ))}
         </div>
       </div>
