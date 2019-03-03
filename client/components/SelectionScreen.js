@@ -34,7 +34,7 @@ class SelectionScreen extends Component {
               &times;
             </span>
             <strong>Thank you</strong> Your request has been submitted and a
-            flight attendant will be with you shortly
+            flight attendant will be with you shortly.
           </div>
           <div className="selection-container">
             <div className="selection-items">
