@@ -30,33 +30,30 @@ class Destination extends Component {
   // }
 
   render() {
-    let alldestinat = this.props.destination
-    // const {destination} = this.props.destination
-    console.log(alldestinat, 'redux store')
-    return (
-      <div />
-      //   {alldestinat} && (
-      //     <div>
-      //       <label htmlFor="dest-select">Choose a destination</label>
-      //       <select id="dest-select" onSubmit={this.handleSubmit}>
-      //         {this.props.destination.map(city => {
-      //           return (
-      //             <option value={city.name} key={city.id}>
-      //               {city.name}
-      //             </option>
-      //           )
-      //         })}
-      //       </select>
-      //     </div>
-      //   ) : (
-      //     <div />
-      //   )
-    )
+    let {destination} = this.props
+    // const {destination = this.props.destination
+    console.log(destination, 'redux store')
+    if (destination) {
+      return (
+        <div>
+          <label htmlFor="dest-select">Choose a destination</label>
+          <select id="dest-select" onSubmit={this.handleSubmit}>
+            {this.props.destination.map(city => {
+              return (
+                <option value={city.name} key={city.id}>
+                  {city.name}
+                </option>
+              )
+            })}
+          </select>
+        </div>
+      )
+    }
   }
 }
 
 const mapStateToProps = state => ({
-  destination: state.destination.destination
+  destination: state.destination
 })
 
 const mapDispatchProps = dispatch => ({
